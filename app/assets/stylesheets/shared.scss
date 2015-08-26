@@ -1,0 +1,32 @@
+body{ padding-top: 50px; }
+
+@mixin border-bottom-radius($radius) {
+       -moz-border-radius-bottomleft: $radius;
+   -webkit-border-bottom-left-radius: $radius;
+           border-bottom-left-radius: $radius;
+      -moz-border-radius-bottomright: $radius;
+  -webkit-border-bottom-right-radius: $radius;
+          border-bottom-right-radius: $radius;
+                     -webkit-box-shadow: none;
+                        -moz-box-shadow: none;
+                             box-shadow: none;
+}
+
+@mixin border-top-radius($radius) {
+       -moz-border-radius-topleft: $radius;
+   -webkit-border-top-left-radius: $radius;
+           border-top-left-radius: $radius;
+      -moz-border-radius-topright: $radius;
+  -webkit-border-top-right-radius: $radius;
+          border-top-right-radius: $radius;
+                  -webkit-box-shadow: none;
+                     -moz-box-shadow: none;
+                          box-shadow: none;
+}
+
+
+.btn-success{ width: 300px; height: 60px; font-size: 22px; }
+$border-gray:               #eaedf2;
+$footer-main-bg:            #3b404b;
+$footer-copyright-bg:       #2f343e;
+$footer-copyright-color:    #565f73;
