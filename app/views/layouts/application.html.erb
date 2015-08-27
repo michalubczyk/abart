@@ -9,6 +9,8 @@
 <body>
   <%= render "shared/navbar" %>
   <%= render "shared/content" %>
-  <%= render "shared/footer" %>
+  <% unless user_signed_in? %>
+    <%= render "shared/footer" %>
+  <% end %>
 </body>
 </html>
