@@ -16,6 +16,8 @@
           <li><%= link_to "Inne urządzenia", "#" %></li>
           <li><%= link_to "Wyloguj", destroy_user_session_path, method: :delete %></li>
         </ul>
+      <% elsif controller.controller_name == "sessions" %>
+        <ul class="nav navbar-nav navbar-right"><li></li></ul>
       <% else %>
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "O nas", "#about" %></li>
