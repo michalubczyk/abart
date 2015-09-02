@@ -1,5 +1,15 @@
 body{ padding-top: 50px; }
 
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+        -webkit-box-shadow: none;
+           -moz-box-shadow: none;
+                box-shadow: none;
+}
+
 @mixin border-bottom-radius($radius) {
        -moz-border-radius-bottomleft: $radius;
    -webkit-border-bottom-left-radius: $radius;

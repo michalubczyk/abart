@@ -11,7 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150827092140) do
+ActiveRecord::Schema.define(version: 20150901083339) do
+
+  create_table "copiers", force: :cascade do |t|
+    t.string   "nazwa",                    limit: 255
+    t.string   "stan",                     limit: 255
+    t.decimal  "cena",                                 precision: 10
+    t.boolean  "promocja",                 limit: 1
+    t.string   "funkcjonalnosc_st",        limit: 255
+    t.string   "funkcjonalnosc_op",        limit: 255
+    t.integer  "predkosc_drukowania",      limit: 4
+    t.boolean  "duplex",                   limit: 1
+    t.string   "formaty_oryginalow",       limit: 255
+    t.string   "podajnik_papieru_st",      limit: 255
+    t.string   "gramatura_papieru",        limit: 255
+    t.string   "rozdzielczosc_drukowania", limit: 255
+    t.string   "rozdzielczosc_kopiowania", limit: 255
+    t.string   "tryb_skanowania",          limit: 255
+    t.boolean  "drukowanie_sieciowe",      limit: 1
+    t.boolean  "podajnik_oryginalow_st",   limit: 1
+    t.string   "dysk_hdd",                 limit: 255
+    t.boolean  "druk_nosniki_danych",      limit: 1
+    t.integer  "czas_nagrzewania",         limit: 4
+    t.datetime "created_at",                                          null: false
+    t.datetime "updated_at",                                          null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false

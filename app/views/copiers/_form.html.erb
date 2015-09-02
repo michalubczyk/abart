@@ -1,0 +1,87 @@
+<div class="row">
+  <%= form_for @copier do |f| %>
+  <div class="col-xs-12 col-md-6 copiers-form">
+    <div class="form-group">
+      <%= f.label :nazwa %>
+      <%= f.text_field :nazwa, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :stan, class: "form-checkbox" %>
+      <%= f.select :stan, ['nowa', 'używana'], class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :cena %>
+      <%= f.text_field :cena, class: "form-control" %>
+    </div>
+    <div class="form-group form-inline">
+      <%= f.check_box :promocja, class: "form-checkbox" %>
+      <%= f.label :promocja %>
+    </div>
+    <div class="form-group">
+      <%= f.label :funkcjonalnosc_st, "Funkcjonalność w standardzie" %>
+      <%= f.text_field :funkcjonalnosc_st, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :funkcjonalnosc_op, "Funkcjonalność opcjonalna" %>
+      <%= f.text_field :funkcjonalnosc_op, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :predkosc_drukowania, "Prędkość drukowania A4" %>
+      <%= f.text_field :predkosc_drukowania, class: "form-control" %>
+    </div>
+    <div class="form-group form-inline">
+      <%= f.check_box :duplex, class: "form-checkbox" %>
+      <%= f.label :duplex, "Drukowanie dwustronne (duplex)" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :formaty_oryginalow, "Formaty oryginałów" %>
+      <%= f.text_field :formaty_oryginalow, class: "form-control" %>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-6 copiers-form">
+    <div class="form-group">
+      <%= f.label :podajnik_papieru_st, "Podajniki papieru w standardzie" %>
+      <%= f.text_field :podajnik_papieru_st, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :gramatura_papieru, "Gramatura papieru" %>
+      <%= f.text_field :gramatura_papieru, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :rozdzielczosc_drukowania, "Rozdzielczość drukowania" %>
+      <%= f.text_field :rozdzielczosc_drukowania, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :rozdzielczosc_kopiowania, "Rozdzielczość kopiowania" %>
+      <%= f.text_field :rozdzielczosc_kopiowania, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :tryb_skanowania, "Tryby skanowania" %>
+      <%= f.text_field :tryb_skanowania, class: "form-control" %>
+    </div>
+    <div class="form-group form-inline">
+      <%= f.check_box :drukowanie_sieciowe, class: "form-checkbox" %>
+      <%= f.label :drukowanie_sieciowe %>
+    </div>
+    <div class="form-group form-inline">
+      <%= f.check_box :podajnik_oryginalow_st, class: "form-checkbox" %>
+      <%= f.label :podajnik_oryginalow_st, "Podajnik oryginałów w standardzie" %>
+    </div>
+    <div class="form-group form-inline">
+      <%= f.check_box :dysk_hdd, class: "form-checkbox" %>
+      <%= f.label :dysk_hdd %>
+    </div>
+    <div class="form-group form-inline">
+      <%= f.check_box :druk_nosniki_danych, class: "form-checkbox" %>
+      <%= f.label :druk_nosniki_danych, "Druk z nośników danych" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :czas_nagrzewania %>
+      <%= f.text_field :czas_nagrzewania, class: "form-control" %>
+    </div>
+  </div>
+  <div class="text-center">
+    <%= f.submit "Wprowadź", class: "btn btn-primary action" %>
+  </div>
+  <% end %>
+</div>

@@ -1,9 +1,21 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  devise_scope :user do
+    authenticated :user do
+      root 'copiers#index', as: :authenticated_root
+    end
+
+    unauthenticated do
+      root 'home#index', as: :unauthenticated_root
+    end
+  end
+
   root 'home#index'
-  resources :dashboard
-  
+  resources :copiers
+  resources :devices
+  #resources :dashboard
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

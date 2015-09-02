@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nazwa: MyString
+  stan: MyString
+  cena: 9.99
+  promocja: false
+  funkcjonalnosc_st: MyString
+  funkcjonalnosc_op: MyString
+  predkosc_drukowania: 1
+  duplex: false
+  formaty_oryginalow: MyString
+  podajnik_papieru_st: MyString
+  gramatura_papieru: MyString
+  rozdzielczosc_drukowania: MyString
+  rozdzielczosc_kopiowania: MyString
+  tryb_skanowania: MyString
+  drukowanie_sieciowe: false
+  podajnik_oryginalow_st: false
+  dysk_hdd: MyString
+  druk_nosniki_danych: false
+  czas_nagrzewania: 1
+
+two:
+  nazwa: MyString
+  stan: MyString
+  cena: 9.99
+  promocja: false
+  funkcjonalnosc_st: MyString
+  funkcjonalnosc_op: MyString
+  predkosc_drukowania: 1
+  duplex: false
+  formaty_oryginalow: MyString
+  podajnik_papieru_st: MyString
+  gramatura_papieru: MyString
+  rozdzielczosc_drukowania: MyString
+  rozdzielczosc_kopiowania: MyString
+  tryb_skanowania: MyString
+  drukowanie_sieciowe: false
+  podajnik_oryginalow_st: false
+  dysk_hdd: MyString
+  druk_nosniki_danych: false
+  czas_nagrzewania: 1

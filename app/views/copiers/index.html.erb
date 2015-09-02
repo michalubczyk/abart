@@ -1,0 +1,108 @@
+<% @copiers.each do |copier| %>
+<div class="row copier">
+  <div class="col-xs-12 col-md-5">
+    <div class="panel-left text-center">
+      <div class="panel-left-header">
+        <h4><% if copier.promocja? %>PROMOCJA!!!<% end %></h4>
+      </div>
+      <div class="panel-left-body">
+        <%= image_tag("copier.jpg") %>
+      </div>
+      <div class="panel-left-footer">
+        <h4>Cena: <%= copier.cena %> zł</h4>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-7">
+    <div class="panel-right">
+      <div class="panel-right-header text-center">
+        <h4><%= copier.nazwa %></h4>
+      </div>
+      <div class="panel-right-body">
+        <table class="table table-striped">
+          <tr>
+            <td>Stan</td>
+            <td><%= copier.stan %></td>
+          </tr>
+          <tr>
+            <td>Funkcjonalność w standardzie</td>
+            <td><%= copier.funkcjonalnosc_st %></td>
+          </tr>
+          <tr>
+            <td>Funkcjonalność opcjonalna</td>
+            <td><%= copier.funkcjonalnosc_op %></td>
+          </tr>
+          <tr>
+            <td>Prędkość drukowania A4</td>
+            <td><%= copier.predkosc_drukowania %> stron/minutę</td>
+          </tr>
+          <tr>
+            <td>Drukowanie dwustronne (duplex)</td>
+            <td><% if copier.duplex? %>tak<% else %>nie<% end %></td>
+          </tr>
+          <tr>
+            <td>Formaty oryginałów</td>
+            <td><%= copier.formaty_oryginalow %></td>
+          </tr>
+        </table>
+        <div id="<%= copier.id.to_s %>" class="panel-collapse collapse">
+          <table class="table table-striped">
+            <tr>
+              <td>Podajniki papieru w standardzie</td>
+              <td><%= copier.podajnik_papieru_st %></td>
+            </tr>
+            <tr>
+              <td>Gramatura papieru</td>
+              <td><%= copier.gramatura_papieru %> g/m<sup>2</sup></td>
+            </tr>
+            <tr>
+              <td>Rozdzielczość drukowania</td>
+              <td><%= copier.rozdzielczosc_drukowania %> dpi</td>
+            </tr>
+            <tr>
+              <td>Rozdzielczość kopiowania</td>
+              <td><%= copier.rozdzielczosc_kopiowania %> dpi</td>
+            </tr>
+            <tr>
+              <td>Tryby skanowania</td>
+              <td><%= copier.tryb_skanowania %></td>
+            </tr>
+            <tr>
+              <td>Drukowanie sieciowe</td>
+              <td>
+                <% if copier.drukowanie_sieciowe? %>tak<% else %>nie<% end %></td>
+            </tr>
+            <tr>
+              <td>Podajnik oryginałów w standardzie</td>
+              <td><% if copier.podajnik_oryginalow_st? %>tak<% else %>nie<% end %></td>
+            </tr>
+            <tr>
+              <td>Dysk HDD</td>
+              <td><% if copier.dysk_hdd? %>tak<% else %>nie<% end %></td>
+            </tr>
+            <tr>
+              <td>Druk z nośników danych</td>
+              <td><% if copier.druk_nosniki_danych? %>tak<% else %>nie<% end %></td>
+            </tr>
+            <tr>
+              <td>Czas nagrzewania</td>
+              <td><%= copier.czas_nagrzewania %> sekund</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="panel-right-footer">
+        <ul class="list">
+          <li><%= link_to "Więcej", "#" + copier.id.to_s, class: "btn btn-info", data: { toggle: "collapse", target: "#" + copier.id.to_s } %></li>
+        </ul>
+        <% if user_signed_in? %>
+          <ul class="list list-right">
+            <li><%= link_to "Edytuj", edit_copier_path(copier), class: "btn btn-warning", method: :get %></li>
+            <li><%= link_to "Usuń", copier, method: :delete, data:{ confirm: "Czy na pewno chcesz usunąć kserokopiarkę?"}, class: "btn btn-danger", method: :get %></li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
