@@ -4,29 +4,25 @@
   margin: 20px 0;
   border: 2px solid $border-gray;
   @include border-radius(10px);
+
   .panel-left-body{
     width: 250px;
     height: 250px;
     margin: 20px 0;
-    display: block;
     margin-left: auto;
     margin-right: auto;
   }
   .panel-left-footer{ margin: 20px 0; }
 
   .panel-right-header{ margin-bottom: 20px; }
-  .table{
-    margin-bottom: 0;
-    td{ width: 50%; }
-   }
-
+  .table{ td{ width: 50%; } }
   .panel-right-footer{
     margin-top: 40px;
     .list{
       float: left;
       li{ display: inline; margin-right: 20px; }
     }
-    .list-right{ float: right; }
+    //.list-right{ float: right; }
   }
 }
 

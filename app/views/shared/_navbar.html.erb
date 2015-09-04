@@ -1,5 +1,6 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
+
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
@@ -9,6 +10,7 @@
       </button>
       <%= link_to "Abart", root_path, class: "navbar-brand" %>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <% if user_signed_in? %>
         <ul class="nav navbar-nav navbar-right">
@@ -24,9 +26,7 @@
           <li><%= link_to "Inne urządzenia", devices_path %></li>
           <li><%= link_to "Wyloguj", destroy_user_session_path, method: :delete %></li>
         </ul>
-      <% elsif controller.controller_name == "sessions" %>
-        <ul class="nav navbar-nav navbar-right"><li></li></ul>
-      <% else %>
+      <% elsif controller.controller_name == "home" %>
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "O nas", "#about" %></li>
           <li><%= link_to "Kserokopiarki", "#copiers" %></li>
@@ -34,8 +34,11 @@
           <li><%= link_to "Serwis", "#service" %></li>
           <li><%= link_to "Tonery i tusze", "#toners" %></li>
           <li><%= link_to "Kontakt", "#contact" %></li>
-        </ul>
+       </ul>
+      <% else %>
+        <ul class="nav navbar-nav navbar-right"><li></li></ul>
       <% end %>
     </div>
+
   </div>
 </nav>
