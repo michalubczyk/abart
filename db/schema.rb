@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20150901083339) do
     t.string   "dysk_hdd",                 limit: 255
     t.boolean  "druk_nosniki_danych",      limit: 1
     t.integer  "czas_nagrzewania",         limit: 4
+    t.string   "image",                    limit: 255
     t.datetime "created_at",                                          null: false
     t.datetime "updated_at",                                          null: false
   end

@@ -20,6 +20,7 @@ class CreateCopiers < ActiveRecord::Migration
       t.string :dysk_hdd
       t.boolean :druk_nosniki_danych
       t.integer :czas_nagrzewania
+      t.string :image
 
       t.timestamps null: false
     end

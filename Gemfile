@@ -33,6 +33,10 @@ gem 'autoprefixer-rails'
 # Devise
 gem 'devise'
 
+# Rmagick and carrierwave
+gem "rmagick"
+gem "carrierwave"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

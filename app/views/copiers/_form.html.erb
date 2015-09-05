@@ -7,7 +7,7 @@
 </div>
 
 <div class="row">
-  <%= form_for @copier do |f| %>
+  <%= form_for @copier, html: { multipart: true } do |f| %>
     <div class="col-xs-12 col-md-6 copiers-form">
 
       <div class="form-group">
@@ -89,6 +89,11 @@
         <%= f.label :czas_nagrzewania %>
         <%= f.text_field :czas_nagrzewania, class: "form-control" %>
       </div>
+    </div>
+
+    <div class="form-upload">
+      <%= f.label :image, "Załącz zdjęcie" %>
+      <%= f.file_field :image %>
     </div>
 
     <div class="text-center">

@@ -7,7 +7,7 @@
           <h4><% if copier.promocja? %>PROMOCJA!!!<% end %></h4>
         </div>
         <div class="panel-left-body">
-          <%= image_tag("copier.jpg") %>
+          <%= image_tag copier.image.thumb.url if copier.image? %>
         </div>
         <div class="panel-left-footer">
           <h4>Cena: <%= copier.cena %> zł</h4>
